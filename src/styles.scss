@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+@import './styles/variables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $dark;
+    color: $white;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn {
+    color: $white;
+    padding: 10px 1rem;
+    font-weight: 500;
+    font-size: 0.875rem
+        /* 14px */
+    ;
+    line-height: 1.25rem
+        /* 20px */
+    ;
+    text-decoration: none;
+    cursor: pointer;
+
+    &-outline {
+        background-color: transparent;
+        border: 1px solid $primary;
+
+        &:hover {
+            background-color: $primary;
+        }
+    }
+}
+
+.icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: $dark;
+    border: none;
+    border-radius: 50%;
+    color: $white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icon-btn:hover {
+    background-color: $light-dark;
+    transform: translateY(-5px);
+}
+
+.icon-btn:active {
+    background-color: $light-gray;
+    transform: translateY(0);
+}

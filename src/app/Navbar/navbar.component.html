@@ -1,0 +1,50 @@
+<nav class="nav">
+  <div class="container">
+    <div class="flex">
+      <!-- Logo -->
+      <div class="logo">
+        <span class="text-white">
+          Palash <span class="text-primary">.</span>
+        </span>
+      </div>
+
+      <!-- Navlink -->
+      <div class="nav-links">
+        <a href="#" *ngFor="let link of links" class="link">{{ link }}</a>
+        <a href="#" class="btn btn-outline">Contact</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-btn"
+        type="button"
+        aria-label="Toggle menu"
+        class="icon-btn mobile-menu-btn"
+        (click)="toggleMenu()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          style="width: 30px; height: 30px;"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </button>
+      <!-- <div class="icon-btn">
+      </div> -->
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu" *ngIf="showMobileMenu">
+    <a href="" *ngFor="let link of links" class="link">{{ link }}</a>
+    <a href="" class="btn btn-outline">Contact</a>
+  </div>
+</nav>
