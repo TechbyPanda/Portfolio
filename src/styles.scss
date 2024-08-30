@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all .2s ease-in-out;
 }
 
 body {
@@ -25,6 +26,9 @@ body {
     ;
     text-decoration: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 2px;
 
     &-outline {
         background-color: transparent;
@@ -32,6 +36,28 @@ body {
 
         &:hover {
             background-color: $primary;
+        }
+
+        &:active{
+            background-color: $deep-dark;
+        }
+    }
+
+    &-text-gray{
+        background-color: transparent;
+        color: $gray;
+        font-weight: 700;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        border: none;
+
+        &:hover{
+            color: $light-gray;
+        }
+
+        &:active{
+            background-color: $light-gray;
+            color: $gray;
         }
     }
 }
