@@ -3,14 +3,14 @@
     <div class="flex">
       <!-- Logo -->
       <div class="logo">
-        <span class="text-white">
+        <a href="#hero" class="text-white">
           Palash <span class="text-primary">.</span>
-        </span>
+        </a>
       </div>
 
       <!-- Navlink -->
       <div class="nav-links">
-        <a href="#" *ngFor="let link of links" class="link">{{ link }}</a>
+        <a href="#{{link.toLowerCase()}}" *ngFor="let link of links" class="link">{{ link }}</a>
         <a href="#" class="btn btn-outline">Contact</a>
       </div>
 
@@ -44,7 +44,7 @@
 
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="mobile-menu" *ngIf="showMobileMenu">
-    <a href="" *ngFor="let link of links" class="link">{{ link }}</a>
+    <a href="#{{link.toLowerCase()}}" *ngFor="let link of links" class="link">{{ link }}</a>
     <a href="" class="btn btn-outline">Contact</a>
   </div>
 </nav>

@@ -1,14 +1,14 @@
 import { Component } from "@angular/core";
 
 @Component({
-    selector: 'navbar',
+    selector: 'app-v1-navbar',
     templateUrl: './navbar.component.html',
     styleUrl: './navbar.component.scss',
 })
 
 export class NavbarComponent{
     name:string = "Palash"
-    links: string[] = ['Home', 'Services', 'Work', 'About']
+    links: string[] = ['Skills', 'Experience', 'Project', 'Education']
     showMobileMenu:boolean = false;
 
     toggleMenu = () => {

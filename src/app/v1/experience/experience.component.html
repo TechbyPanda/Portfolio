@@ -1,0 +1,14 @@
+<section class="container" id="experience">
+    <h2><span>Experience</span><span class="line"></span></h2>
+    <div class="experiences">
+        <div class="card" *ngFor="let exp of data">
+            <div class="company-details">
+                <h3>{{ exp.name }}</h3>
+                <h5>{{ exp.joiningDate }} - {{ exp.endDate }}</h5>
+            </div>
+            <ul class="points">
+                <li *ngFor="let point of exp.points">{{ point }}</li>
+            </ul>
+        </div>
+    </div>
+</section>

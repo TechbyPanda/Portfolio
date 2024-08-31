@@ -1,0 +1,29 @@
+<section class="container" id="skills">
+  <h2><span>Skills</span><span class="line"></span></h2>
+  <div class="skills">
+    <div *ngFor="let skill of visibleSkills" class="skill">
+      <div class="img-container">
+        <img [src]="skill.img" alt="" />
+      </div>
+      <p>{{ skill.name }}</p>
+    </div>
+  </div>
+  <button class="btn btn-outline" style="margin: 2rem auto;" (click)="toggleSkills()">
+    {{hideSkills ? "+ "+(allSkills.length - visibleSkills.length)+" more skills" : "Hide skills" }}
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="size-6"
+      style="width: 30px; height: 30px;"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m19.5 8.25-7.5 7.5-7.5-7.5"
+      />
+    </svg>
+  </button>
+</section>
